@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(135deg,#153677,#4e085f);
+    position: fixed;
+}
+
+.box{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px 20px 40px;
+    margin: auto;
+    width: 540px;
+    margin-top: 150px;
+
+}
+
+.box h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+}
+
+.box h2 img{
+    width: 30px;
+    margin-left: 20px;
+}
+
+.inputBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edfef0;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+#addText{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+#btn{
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: none;
+}
+
+/* #ToDoList{
+    width: 100%;
+    height: auto;
+} */
+
+ul li{
+    
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-left: -30px;
+}
+
+ul li::before{
+    content: '';
+    position:absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 0;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    
+
+}
+
+
+
+ul li span:hover{
+    background: #edeef0;
+
+}
+
+@media (max-width:400px){
+    .box{
+    width: 340px;
+}
+
+#btn{
+    padding: 16px 40px;
+    font-size: 14px;
+}
+
+.inputBox{
+    padding-left: 0px;
+    font-size: 14px;
+}
+    
+}
